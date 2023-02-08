@@ -1,0 +1,13 @@
+<app-main-header> </app-main-header>
+<app-navbar> </app-navbar>
+    <div class="product-list-options d-flex justify-content-between">
+        <span> <b> Shop All </b> (64 items) </span>
+        <div class="products-filter d-flex align-items-center justify-content-between">
+            <img src="../../assets/images/filter.svg">
+            <span class=""> Product Type </span>
+            <img src="../../assets/images/arrow.svg">
+        </div>
+    </div>
+<div class="product-list-container d-flex justify-content-center">
+    <app-card-product *ngFor="let product of products" [product]="product" class="product-card"></app-card-product>
+</div>
