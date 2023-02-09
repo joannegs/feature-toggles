@@ -3,7 +3,7 @@
     <h3>Canopy .</h3>
 
     <div class="left-icons d-flex justify-content-between">
-        <div class="d-flex flex-column">            
+        <div *appFeatureToggle="'like-feature'" class="d-flex flex-column">            
             <app-status-tag class="status-tag" [notificationNumber]="0"> </app-status-tag>
             <img class="icons-with-notifications" src="../../../assets/images/heart.svg">
 

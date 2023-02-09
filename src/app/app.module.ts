@@ -40,7 +40,7 @@ export function init_app(appLoadService: AppInitService) {
     {
       provide: APP_INITIALIZER,
       useFactory: init_app,
-      deps: [AppInitService],
+      deps: [ AppInitService ],
       multi: true
     }],
     
