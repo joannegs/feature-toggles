@@ -2,16 +2,16 @@
     <img src="../../../assets/images/menu-hamburger.svg">
     <h3>Canopy .</h3>
 
-    <app-status-tag [notificationNumber]="(bag$ | async)?.length"> </app-status-tag>
-
     <div class="left-icons d-flex justify-content-between">
-        <div>
-            <img src="../../../assets/images/heart.svg">
-        </div>
-        <div>
-            <img src="../../../assets/images/bag.svg">
-        </div>
+        <div class="d-flex flex-column">            
+            <app-status-tag class="status-tag" [notificationNumber]="0"> </app-status-tag>
+            <img class="icons-with-notifications" src="../../../assets/images/heart.svg">
 
+        </div>
+        <div class="d-flex flex-column">            
+            <app-status-tag class="status-tag" [notificationNumber]="(bag$ | async)?.length"> </app-status-tag>
+            <img class="icons-with-notifications" src="../../../assets/images/bag.svg">
+        </div>
 
         <img src="../../../assets/images/search.svg">
         <img src="../../../assets/images/person-icon.svg">

@@ -7,11 +7,17 @@
     }
 
     .left-icons {
-        width: 180px;
+        width: 210px;
+        
 
         img {
             width: 30px;
             cursor: pointer;
+        }
+
+        .icons-with-notifications {
+            margin-bottom: 20px;
+
         }
     }
 }

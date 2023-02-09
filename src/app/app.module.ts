@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,12 @@ import { StatusTagComponent } from './components/status-tag/status-tag.component
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { bagReducer } from './state/bag/bag.reducer';
+import { FeatureToggleDirective } from './shared/directives/feature-toggle.directive';
+import { AppInitService } from './shared/services/app-init.service';
+
+export function init_app(appLoadService: AppInitService) {
+  return () => appLoadService.init();
+}
 
 @NgModule({
   declarations: [
@@ -18,7 +24,8 @@ import { bagReducer } from './state/bag/bag.reducer';
     ProductsListComponent,
     MainHeaderComponent,
     NavbarComponent,
-    StatusTagComponent
+    StatusTagComponent,
+    FeatureToggleDirective,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,15 @@ import { bagReducer } from './state/bag/bag.reducer';
       bag: bagReducer
     })
     ],
-  providers: [],
+  providers: [
+    AppInitService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: init_app,
+      deps: [AppInitService],
+      multi: true
+    }],
+    
   bootstrap: [AppComponent]
 })
 export class AppModule { }

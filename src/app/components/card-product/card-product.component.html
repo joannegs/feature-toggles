@@ -5,7 +5,7 @@
     <span class="general-sans product-subtitles-17 products-details"> {{product.description}} </span>
     <span class="general-sans product-subtitles-17 products-details"> {{product.shades}} </span>
 
-    <button (click)="addToBag()" class="d-flex justify-content-between"> 
+    <button (click)="addToBag()" class="d-flex justify-content-between" [ngClass]="addedToBag ? 'removeButton' : ''"> 
         <span *ngIf="!addedToBag"> Add to Bag </span>
         <span *ngIf="addedToBag"> Remove from Bag </span>
         <span> ${{product.price}}</span>
