@@ -1,0 +1,25 @@
+.main-header-container {
+    padding: 32px 70px;
+    background-color: #FFFF;
+
+    h3 {
+        font-family: 'Clash Grotesk';
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    .left-icons {
+        width: 210px;
+        
+
+        img {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .icons-with-notifications {
+            margin-bottom: 20px;
+
+        }
+    }
+}

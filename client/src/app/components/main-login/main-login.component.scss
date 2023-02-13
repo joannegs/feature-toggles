@@ -1,0 +1,55 @@
+.main-login-container {
+    .main-login-info {
+        .text-content {
+            text-align: center;
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        h3 {
+            width: 760px;
+            font-family: 'Cabinet Grotesk';
+            color: #3F2B1E;
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 50px;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            font-family: 'General Sans';
+            color: #0D0D0D;
+            width: 575px;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+            letter-spacing: 0.005em;
+            margin-bottom: 70px;
+        }
+
+        input {
+            font-family: 'General Sans';
+            background-color: transparent;
+            border: 1px solid #828282;
+            border-radius: 5px;
+            color:  #4F4F4F;
+            outline: 0;
+            padding: 13px 28px;
+            margin-bottom: 20px;
+            width: 60%;
+        }
+
+        button {
+            font-family: 'General Sans';
+            padding: 25px 8px;
+            outline: none;
+            background-color: #261a13;
+            border: none;
+            border-radius: 2px;
+            color: #FDF2EA;
+            font-size: 20px;
+            width: 60%;
+        }
+    }
+}
