@@ -18,6 +18,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ButtonComponent } from './components/button/button.component';
 import { AboutComponent } from './components/about/about.component';
 import { FindYourShadeComponent } from './components/find-your-shade/find-your-shade.component';
+import { ShadeComponent } from './pages/shade/shade.component';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();
@@ -38,6 +39,7 @@ export function init_app(appLoadService: AppInitService) {
     ButtonComponent,
     AboutComponent,
     FindYourShadeComponent,
+    ShadeComponent,
   ],
   imports: [
     BrowserModule,

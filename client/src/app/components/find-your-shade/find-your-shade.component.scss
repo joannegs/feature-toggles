@@ -1,0 +1,31 @@
+.find-your-shade-container {
+    width: 100vw;
+    height: 455px;
+    background-color: #0D0D0D;
+    color: #F8F8F8;
+    font-family: 'General Sans';
+
+    .try-button {
+        margin-top: 2rem;
+        border: 2px solid #F8F8F8;
+        padding: 15px 50px; 
+        cursor: pointer;
+
+        img {
+            margin-right: 25px;
+        }
+    }
+
+    h3 {
+        color: #FAFAFA;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+
+}
