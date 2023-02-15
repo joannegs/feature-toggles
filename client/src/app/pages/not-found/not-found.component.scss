@@ -1,0 +1,21 @@
+.not-found-page-container {
+    font-family: 'General Sans';
+    background-color: #FFFF;
+    height: 83vh;
+
+    h4 {
+        color: #5F504B;
+        font-size: 64px;
+        font-weight: 400;
+    }
+    p {
+        color: #424242;
+        width: 553px;
+        text-align: center;
+        
+        a {
+            text-decoration: none;
+            color: #2F80ED;
+        }
+    }
+}

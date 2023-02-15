@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-login',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-login.component.scss']
 })
 export class MainLoginComponent {
+
+  constructor(private router: Router) {}
+
+  login() {
+    this.router.navigate(['/products']);
+  }
 
 }

@@ -1,13 +1,16 @@
-<div class="product-card-container d-flex flex-column align-items-center"> 
-    <img src={{product.imagePath}}>
-    <span class="general-sans product-title products-details">  
+<div class="product-card-container d-flex flex-column align-items-center">
+    <div class="product-image-container d-flex"> 
+        <img class="product-image1" src={{product.imagePath}}>
+        <img class="product-image2" src={{product.imagePath}}>    </div>
+        
+    <span class="general-sans product-title products-details">
         <b> {{product.name}} </b> </span>
     <span class="general-sans product-subtitles-17 products-details"> {{product.description}} </span>
     <span class="general-sans product-subtitles-17 products-details"> {{product.shades}} </span>
 
-    <button (click)="addToBag()" class="d-flex justify-content-between" [ngClass]="addedToBag ? 'removeButton' : ''"> 
+    <button (click)="addToBag()" class="d-flex justify-content-between" [ngClass]="addedToBag ? 'removeButton' : ''">
         <span *ngIf="!addedToBag"> Add to Bag </span>
         <span *ngIf="addedToBag"> Remove from Bag </span>
         <span> ${{product.price}}</span>
     </button>
-</div> 
+</div>

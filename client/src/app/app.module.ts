@@ -14,6 +14,10 @@ import { FeatureToggleDirective } from './shared/directives/feature-toggle.direc
 import { AppInitService } from './shared/services/app-init.service';
 import { MainLoginComponent } from './components/main-login/main-login.component';
 import { LoginComponent } from './pages/login/login.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ButtonComponent } from './components/button/button.component';
+import { AboutComponent } from './components/about/about.component';
+import { FindYourShadeComponent } from './components/find-your-shade/find-your-shade.component';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();
@@ -30,6 +34,10 @@ export function init_app(appLoadService: AppInitService) {
     FeatureToggleDirective,
     MainLoginComponent,
     LoginComponent,
+    NotFoundComponent,
+    ButtonComponent,
+    AboutComponent,
+    FindYourShadeComponent,
   ],
   imports: [
     BrowserModule,

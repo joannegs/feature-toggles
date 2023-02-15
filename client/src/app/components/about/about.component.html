@@ -1,0 +1,13 @@
+<div class="about-component-container">
+    <div class="container-title d-flex align-items-center justify-content-center">
+        <span> <b>About </b><span class="canopy-title">Canopy.</span></span>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column align-items-center" *ngFor="let topic of aboutTopics">
+            <img src={{topic.imgPath}} />
+            <h5> {{ topic.title }} </h5>
+            <p> {{ topic.text}} </p>
+        </div>
+    </div>
+</div>

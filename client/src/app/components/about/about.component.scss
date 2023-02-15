@@ -1,0 +1,27 @@
+.about-component-container {
+    width: 100%;
+    background-color: #FFF3F2;
+    padding: 72px 140px;
+    font-family: 'General Sans';
+
+    .container-title {
+        margin-bottom: 65px;
+        font-size: 32px;
+
+        .canopy-title {
+            font-family: 'Clash Grotesk';
+            font-weight: 100;
+        }
+    }
+
+    p {
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    img {
+        height: 75px;
+        margin-bottom: 16.8px;
+    
+    }
+}
