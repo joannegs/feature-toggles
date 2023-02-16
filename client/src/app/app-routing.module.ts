@@ -5,10 +5,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AboutComponent } from './components/about/about.component';
 import { FindYourShadeComponent } from './components/find-your-shade/find-your-shade.component';
+import { ShadeComponent } from './pages/shade/shade.component';
 
 
 const routes: Routes = [
-  { path: '', component: FindYourShadeComponent },
+  { path: '', component: ShadeComponent },
   { path: 'products', component: ProductsListComponent}, 
   { path: '**', component: NotFoundComponent },
 ];

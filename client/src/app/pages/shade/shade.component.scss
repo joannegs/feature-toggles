@@ -1,0 +1,57 @@
+.shade-page {
+    font-family: 'General Sans';
+    text-align: center;
+    padding: 48px 70px;
+
+    .results {
+        border: 1px solid #000000;
+        padding: 55px 30%;
+        width: 80%;
+        font-weight: 400;
+        margin-bottom: 72px;
+
+        .title {
+            font-size: 18px;
+        }
+
+        .shade-result {
+            align-items: center;
+            margin-bottom: 41px;
+
+            .shade-color {
+                height: 55.57px;
+                width: 55.57px;
+                margin-right: 17.54px;
+            }
+
+            .shade-result-name {
+                letter-spacing: 0.02em;
+
+                h2 {
+                    font-size: 28px;
+                    margin-right: 13px;
+                }
+
+                span {
+                    font-size: 20px;
+                }
+            }
+
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: 6px;
+        }
+    }
+
+    .recommended {
+        h2 {
+            font-size: 28px;
+            margin-bottom: 60px
+        }
+    }
+
+}

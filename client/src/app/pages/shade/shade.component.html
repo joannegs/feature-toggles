@@ -1,1 +1,26 @@
-<p>shade works!</p>
+<div class="shade-page d-flex flex-column align-items-center">
+    <div class="results d-flex flex-column">
+        <span class="title"> Shades Result </span>
+        <div class="shade-result d-flex">
+            <div style="background-color: #E7BE9D;" class="shade-color" id="g9-shade"></div>
+            <h2 class="shade-result-name">G9
+                <span> (warm medium shade)</span>
+            </h2>
+        </div>
+
+        <div class="shade-result d-flex">
+            <div style="background-color: #E9B78D;"  class="shade-color" id="g6-shade"></div>
+            <h2 class="shade-result-name">G6
+                <span> (deep natural shade)</span>
+            </h2>
+        </div>
+        <p> Your skin tone looks like a warm tone color. We recommend these two colors for you. </p>
+    </div>
+
+    <div class="recommended">
+        <h2> Recommended Products </h2>
+        <div class="products d-flex justify-content-between"> 
+            <app-card-product *ngFor="let product of recommendedProducts" [product]="product"></app-card-product>
+        </div>
+    </div>
+</div>
