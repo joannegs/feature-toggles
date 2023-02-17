@@ -19,6 +19,8 @@ import { ButtonComponent } from './components/button/button.component';
 import { AboutComponent } from './components/about/about.component';
 import { FindYourShadeComponent } from './components/find-your-shade/find-your-shade.component';
 import { ShadeComponent } from './pages/shade/shade.component';
+import { MyLikesComponent } from './pages/my-likes/my-likes.component';
+import { ChosesForYouComponent } from './components/choses-for-you/choses-for-you.component';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();
@@ -40,6 +42,8 @@ export function init_app(appLoadService: AppInitService) {
     AboutComponent,
     FindYourShadeComponent,
     ShadeComponent,
+    MyLikesComponent,
+    ChosesForYouComponent,
   ],
   imports: [
     BrowserModule,
