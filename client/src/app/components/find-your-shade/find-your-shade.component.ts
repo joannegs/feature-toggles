@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-find-your-shade',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./find-your-shade.component.scss']
 })
 export class FindYourShadeComponent {
+  
+  constructor(private router: Router){}
+
+  getShadeResults() {
+    this.router.navigate(['shade-results']);
+  }
 
 }

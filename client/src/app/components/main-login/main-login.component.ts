@@ -11,7 +11,7 @@ export class MainLoginComponent {
   constructor(private router: Router) {}
 
   login() {
-    this.router.navigate(['/products']);
+    this.router.navigate(['/home']);
   }
 
 }

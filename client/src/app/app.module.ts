@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
-import { ProductsListComponent } from './pages/products-list/products-list.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { StatusTagComponent } from './components/status-tag/status-tag.component';
@@ -20,8 +20,9 @@ import { AboutComponent } from './components/about/about.component';
 import { FindYourShadeComponent } from './components/find-your-shade/find-your-shade.component';
 import { ShadeComponent } from './pages/shade/shade.component';
 import { MyLikesComponent } from './pages/my-likes/my-likes.component';
-import { ChosesForYouComponent } from './components/choses-for-you/choses-for-you.component';
 import { ChosenForYouComponent } from './pages/chosen-for-you/chosen-for-you.component';
+import { HomeComponent } from './pages/home/home.component';
+import { likeReducer } from './state/like/like.reducer';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();
@@ -44,15 +45,16 @@ export function init_app(appLoadService: AppInitService) {
     FindYourShadeComponent,
     ShadeComponent,
     MyLikesComponent,
-    ChosesForYouComponent,
     ChosenForYouComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot({
-      bag: bagReducer
+      bag: bagReducer,
+      likes: likeReducer, 
     })
     ],
   providers: [
