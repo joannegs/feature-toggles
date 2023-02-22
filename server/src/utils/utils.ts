@@ -8,10 +8,10 @@ interface Feature {
 export const readFeatures = (): Feature[] => {
     let features: Feature[] = [];
 
-    fs.readFile(`../assets/features-toggle.json`, 'utf-8', (err, data) => {
+    fs.readFile(`../assets/features-toggle.js`, 'utf-8', (err, data) => {
         try {
             features = JSON.parse(data);
-        } catch (err) {
+        } catch (err: any) {
             throw new Error(err.message)
         }
     });
