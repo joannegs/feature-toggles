@@ -1,7 +1,7 @@
 <div class="product-card-container d-flex flex-column align-items-center">
     <div class="product-image-container d-flex"> 
-        <img class="product-image1" src={{product.imagePath}}>
-        <img class="product-image2" src={{product.imagePath}}>    </div>
+        <img src={{product.imagePath}}>   
+    </div>
         
     <span class="general-sans product-title products-details">
         <b> {{product.name}} </b> </span>
@@ -12,5 +12,11 @@
         <span *ngIf="!addedToBag"> Add to Bag </span>
         <span *ngIf="addedToBag"> Remove from Bag </span>
         <span> ${{product.price}}</span>
+    </button>
+
+    <button (click)="loveProduct()" class="d-flex justify-content-between align-items-center" [ngClass]="loved ? 'loved' : ''">
+        <span *ngIf="!loved"> I love this! </span>
+        <span *ngIf="loved"> Remove love </span>
+        <img *ngIf="!loved" src="../../../assets/images/coracao.svg" height="18">
     </button>
 </div>

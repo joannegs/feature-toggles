@@ -2,11 +2,11 @@ import { createAction } from "@ngrx/store";
 import { BeautyProduct } from "src/app/shared/interfaces/BeautyProduct.interface";
 
 export enum LikeActionType {
-    ADD_ITEM = '[LIKE] Add Product to Bag',
-    REMOVE_ITEM = '[LIKE] Remove Product from Bag',
-    GET_ITEMS = '[LIKE] Get items from bag'
+    ADD_ITEM = '[LOVE] Love Product',
+    REMOVE_ITEM = '[LOVE] Remove Love of Product',
+    GET_ITEMS = '[LOVE] Get Loved Products'
 }
 
-export const addItemToBag = createAction(LikeActionType.ADD_ITEM, (product: BeautyProduct) => product);
-export const removeItemFromBag = createAction(LikeActionType.REMOVE_ITEM, (product: BeautyProduct) => product);
-export const getBag = createAction(LikeActionType.GET_ITEMS)
+export const loveProduct = createAction(LikeActionType.ADD_ITEM, (product: BeautyProduct) => product);
+export const removeLoveofProduct = createAction(LikeActionType.REMOVE_ITEM, (product: BeautyProduct) => product);
+export const getLoveds = createAction(LikeActionType.GET_ITEMS)

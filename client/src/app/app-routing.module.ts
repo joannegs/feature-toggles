@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
-import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { AboutComponent } from './components/about/about.component';
-import { FindYourShadeComponent } from './components/find-your-shade/find-your-shade.component';
-import { ShadeComponent } from './pages/shade/shade.component';
-
+import { MyLikesComponent } from './pages/my-likes/my-likes.component';
+import { ChosenForYouComponent } from './pages/chosen-for-you/chosen-for-you.component';
 
 const routes: Routes = [
-  { path: '', component: ShadeComponent },
+  { path: '', component: ChosenForYouComponent },
   { path: 'products', component: ProductsListComponent}, 
   { path: '**', component: NotFoundComponent },
 ];

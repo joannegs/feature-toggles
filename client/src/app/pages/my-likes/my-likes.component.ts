@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BeautyProduct } from './../../shared/interfaces/BeautyProduct.interface';
 
 @Component({
   selector: 'app-my-likes',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-likes.component.scss']
 })
 export class MyLikesComponent {
+
+  userLovedProducts: BeautyProduct[] = [];
 
 }

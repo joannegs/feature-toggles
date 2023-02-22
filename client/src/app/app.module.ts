@@ -21,6 +21,7 @@ import { FindYourShadeComponent } from './components/find-your-shade/find-your-s
 import { ShadeComponent } from './pages/shade/shade.component';
 import { MyLikesComponent } from './pages/my-likes/my-likes.component';
 import { ChosesForYouComponent } from './components/choses-for-you/choses-for-you.component';
+import { ChosenForYouComponent } from './pages/chosen-for-you/chosen-for-you.component';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();
@@ -44,6 +45,7 @@ export function init_app(appLoadService: AppInitService) {
     ShadeComponent,
     MyLikesComponent,
     ChosesForYouComponent,
+    ChosenForYouComponent,
   ],
   imports: [
     BrowserModule,
