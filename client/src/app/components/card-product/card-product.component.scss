@@ -1,6 +1,7 @@
 .product-card-container {
     padding: 5px;
-    background-color: #FFFF;
+    // background-color: #FFFF;
+    padding: 30px 10px;
 
     button {
         width: 222px;
@@ -13,7 +14,6 @@
         &:focus {
             outline: none;
         }
-
 
         span {
             font-weight: 400;
@@ -46,5 +46,6 @@
     .product-image-container {
         position: relative;
         cursor: pointer;
+        height: 250px;
     }
 }

@@ -2,6 +2,7 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import { CardProductComponent } from './components/card-product/card-product.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
@@ -52,6 +53,7 @@ export function init_app(appLoadService: AppInitService) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     StoreModule.forRoot({
       bag: bagReducer,
       likes: likeReducer, 

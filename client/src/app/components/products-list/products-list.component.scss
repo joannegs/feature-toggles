@@ -1,5 +1,5 @@
 .products-list-component {
-    background-color: #FFFF;
+    // background-color: #FFFF;
 
     .product-list-options {
         padding: 15px 70px;
@@ -12,6 +12,7 @@
     .product-list-container {
         width: 100%;
         padding: 5% 20%;
+        flex-wrap: wrap;
 
         .product-card {
             margin: 0 16px;

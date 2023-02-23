@@ -7,7 +7,5 @@ import { BeautyProduct } from './../../shared/interfaces/BeautyProduct.interface
   styleUrls: ['./my-likes.component.scss']
 })
 export class MyLikesComponent {
-
   userLovedProducts: BeautyProduct[] = [];
-
 }

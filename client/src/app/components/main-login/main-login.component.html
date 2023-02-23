@@ -6,8 +6,8 @@
             too. Create the best foundation for your 
             skin tone with Minisque. </h5>
 
-            <input placeholder="E-mail">
-            <input placeholder="Password"> 
+            <input [(ngModel)]="email" placeholder="E-mail">
+            <input [(ngModel)]="password" type="password" placeholder="Password"> 
             <app-button (click)="login()" [button]="'Shop Foundation'"></app-button>
     </div>
 

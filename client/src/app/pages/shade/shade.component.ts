@@ -18,7 +18,7 @@ export class ShadeComponent implements OnInit {
   }
 
   getRecommendedProducts() {
-    this.productsService.getRecommendedProducts()
+    this.productsService.getChosenProducts()
     .subscribe(products => {
       this.recommendedProducts = products as Array<BeautyProduct> ;
     })

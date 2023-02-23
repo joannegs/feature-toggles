@@ -17,7 +17,7 @@ export class ProductsService {
       }));
   }
 
-  getRecommendedProducts() {
+  getChosenProducts() {
     return this.httpClient
       .get('http://localhost:3000/chosen-products')
       .pipe(tap((products) => {
