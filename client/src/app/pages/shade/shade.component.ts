@@ -1,35 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BeautyProduct } from './../../shared/interfaces/BeautyProduct.interface';
+import { ProductsService } from './../../shared/services/products.service';
 
 @Component({
   selector: 'app-shade',
   templateUrl: './shade.component.html',
   styleUrls: ['./shade.component.scss']
 })
-export class ShadeComponent {
-  recommendedProducts: BeautyProduct[] = RECOMMENDED_PRODUCTS;
+export class ShadeComponent implements OnInit {
+
+  recommendedProducts: BeautyProduct[] = [];
+
+  constructor(private productsService: ProductsService) {}
+
+  ngOnInit() {
+    this.getRecommendedProducts();
+  }
+
+  getRecommendedProducts() {
+    this.productsService.getRecommendedProducts()
+    .subscribe(products => {
+      this.recommendedProducts = products as Array<BeautyProduct> ;
+    })
+  }
 }
 
-const RECOMMENDED_PRODUCTS = [
-  {
-    name: "Cream bronzer",
-    description: "undetectable, felxible coverage",
-    shades: '45 shades',
-    price: 35,
-    imagePath: '../../../assets/images/foundation.svg'
-  },
-  {
-    name: "Warm-tone eyeshadow",
-    description: "beige pallete",
-    shades: '45 shades',
-    price: 35,
-    imagePath: '../../../assets/images/matte-foundation.svg'
-  },
-  {
-    name: "Warm-tone concealer",
-    description: "breakout eraser",
-    shades: '45',
-    price: 35,
-    imagePath: '../../../assets/images/lipstick.svg'
-  },
-]

@@ -1,13 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of, tap } from 'rxjs';
+import { tap } from 'rxjs';
 import { FeatureToggleService } from './feature-toggle.service';
-
-
-interface Feature {
-  name: string,
-  active: boolean,
-}
 
 @Injectable({
   providedIn: 'root'
