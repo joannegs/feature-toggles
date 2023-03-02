@@ -1,13 +1,13 @@
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("users")
-export class User {
+@Entity("likes")
+export class Like {
     @PrimaryGeneratedColumn('increment')
     id!: number;
 
     @Column({ type: String })
-    email: string;
+    user_id: number;
 
     @Column({ type: String })
-    password: string;
+    product_id: number;
 }

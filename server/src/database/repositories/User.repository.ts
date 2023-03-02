@@ -7,6 +7,3 @@ export const getByEmail = async(email: string) => {
     return await repository.findOneBy({ email: email });
 };
 
-export const getById = async(id: string) => {
-    return await repository.findBy({ id });
-}

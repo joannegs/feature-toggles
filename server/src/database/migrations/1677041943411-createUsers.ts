@@ -8,8 +8,10 @@ export class CreateUsers1677041943411 implements MigrationInterface {
                 columns: [
                     {
                         name: "id",
-                        type: "uuid",
-                        isPrimary: true
+                        type: "integer",
+                        isPrimary: true,
+                        isGenerated: true,
+                        generationStrategy: "increment"
                     },
                     {
                         name: "email",
@@ -23,7 +25,7 @@ export class CreateUsers1677041943411 implements MigrationInterface {
                     },
                 ]
             })
-        )
+        );
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
