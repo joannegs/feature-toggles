@@ -1,7 +1,6 @@
 import { MigrationInterface, QueryRunner } from "typeorm"
 
-export class UsersSeed1677079781507 implements MigrationInterface {
-
+export class SeedUsers1677735705328 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`
         INSERT INTO "users" ("email", "password") VALUES ('user1@gmail.com', 'password');
@@ -16,14 +15,14 @@ export class UsersSeed1677079781507 implements MigrationInterface {
         INSERT INTO "users" ("email", "password") VALUES ('user4@hotmail.com', 'password');
         INSERT INTO "users" ("email", "password") VALUES ('user5@hotmail.com', 'password');
     `
-    )
+        )
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`
         DELETE FROM "users";
     `
-    )
+        )
     }
 
 }
