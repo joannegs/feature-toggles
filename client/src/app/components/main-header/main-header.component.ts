@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { bagState } from 'src/app/state/bag/bag.reducer';
+import { likeState } from './../../state/like/like.reducer';
 
 @Component({
   selector: 'app-main-header',
@@ -9,12 +10,12 @@ import { bagState } from 'src/app/state/bag/bag.reducer';
 })
 export class MainHeaderComponent implements OnInit {
 
-  loggedIn: boolean = false; 
+  loggedIn: boolean = true; 
 
-  bag$ = this.store.select('bag');
+  bag$ = this.bagStore.select('bag');
+  likes$ = this.likeStore.select('likes');
 
-
-  constructor(private store: Store<bagState>) {}
+  constructor(private bagStore: Store<bagState>, private likeStore: Store<likeState>) {}
 
   ngOnInit(): void {}
 

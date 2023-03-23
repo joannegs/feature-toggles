@@ -17,7 +17,6 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
 };
 
 export const getProducts = (req: Request, res: Response, nextFunc: NextFunction) => {
-    console.log("getProducts")
     try {
         let prods = products;
         res.status(200).send(prods);
@@ -27,7 +26,6 @@ export const getProducts = (req: Request, res: Response, nextFunc: NextFunction)
 };
 
 export const getChosenProducts = (req: Request, res: Response, nextFunc: NextFunction) => {
-    console.log("getChosenProducts")
     try {
         const prods = products;
         let chosenProds = [];

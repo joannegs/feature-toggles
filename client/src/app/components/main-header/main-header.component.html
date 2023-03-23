@@ -8,9 +8,14 @@
             <img class="icons-with-notifications" src="../../../assets/images/heart.svg">
 
         </div>
-        <div *ngIf="loggedIn" class="d-flex flex-column">            
+        <div ngIf="loggedIn" *appFeatureToggle="'bag-feature'" class="d-flex flex-column">            
             <app-status-tag class="status-tag" [notificationNumber]="(bag$ | async)?.length"> </app-status-tag>
             <img class="icons-with-notifications" src="../../../assets/images/bag.svg">
+        </div>
+
+        <div *ngIf="loggedIn" class="d-flex flex-column">            
+            <app-status-tag class="status-tag" [notificationNumber]="(likes$ | async)?.length"> </app-status-tag>
+            <img class="icons-with-notifications" src="../../../assets/images/coracao.svg">
         </div>
 
         <img src="../../../assets/images/search.svg">

@@ -24,6 +24,7 @@ import { MyLikesComponent } from './pages/my-likes/my-likes.component';
 import { ChosenForYouComponent } from './pages/chosen-for-you/chosen-for-you.component';
 import { HomeComponent } from './pages/home/home.component';
 import { likeReducer } from './state/like/like.reducer';
+import { EffectsModule } from '@ngrx/effects';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();

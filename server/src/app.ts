@@ -5,7 +5,6 @@ import createConnection from '../src/database/index';
 import bodyParser from 'body-parser';
 import { router as featuresRouter } from './routes/features.route';
 import { router as userRouter } from './routes/users.route';
-import { router as likeRouter } from './routes/likes.route';
 
 export const app = express();
 
@@ -21,4 +20,3 @@ createConnection();
 
 app.use(featuresRouter);
 app.use(userRouter);
-app.use(likeRouter);

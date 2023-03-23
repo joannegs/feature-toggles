@@ -7,6 +7,6 @@
         <app-products-list [products]="products"> </app-products-list>
     </div>
     <app-find-your-shade> </app-find-your-shade>
-    <app-chosen-for-you> </app-chosen-for-you>
+    <app-chosen-for-you *appFeatureToggle="'chosen-products'"> </app-chosen-for-you>
     <app-about> </app-about>
 </div>

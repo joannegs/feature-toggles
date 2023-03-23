@@ -1,8 +1,8 @@
 import { createReducer, on } from "@ngrx/store";
-import { BeautyProduct } from "src/app/shared/interfaces/BeautyProduct.interface";
-import { loveProduct, removeLoveofProduct, getLoveds } from "./like.actions";
+import { loveProduct, removeLoveofProduct } from "./like.actions";
+import { BeautyProduct } from 'src/app/shared/interfaces/BeautyProduct.interface';
 
-export interface bagState {
+export interface likeState {
     likes: Array<BeautyProduct>;
 }
 
@@ -10,8 +10,6 @@ const initialState: Array<BeautyProduct> = [];
 
 export const likeReducer = createReducer(
     initialState,
-    on(loveProduct, (state) => [...state]),
-    on(removeLoveofProduct, (state, product) => [...state, product]),
-    
-)
-
+    on(loveProduct, (state, product) => [...state, product]),
+    on(removeLoveofProduct, (state, product) => [...state].filter(p => p.name !== product.name))
+);

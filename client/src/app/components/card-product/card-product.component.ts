@@ -15,8 +15,8 @@ import { removeLoveofProduct } from './../../state/like/like.actions';
 export class CardProductComponent {
 
   @Input() product!: BeautyProduct; 
+  @Input() loved: boolean = false; 
   addedToBag: boolean = false;
-  loved: boolean = false; 
 
   constructor(private store: Store<AppState>) {}
 
@@ -29,12 +29,14 @@ export class CardProductComponent {
 
   loveProduct() {
     if(!this.loved) { 
-      this.store.dispatch(loveProduct(this.product))
+      console.log(this.product)
+      this.store.dispatch(loveProduct(this.product));
       this.loved = true; 
     } else this.removeLoveOfProduct();
   }
 
   removeLoveOfProduct() {
+    console.log(this.product)
     this.store.dispatch(removeLoveofProduct(this.product))
     this.loved = false;
   }

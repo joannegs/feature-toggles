@@ -14,4 +14,3 @@ export const bagReducer = createReducer(
     on(addItemToBag, (state, product) => [...state, product]),
     on(removeItemFromBag, (state, product) => [...state].filter(p => p.name !== product.name))
 )
-

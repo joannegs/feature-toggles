@@ -4,7 +4,7 @@ import { UsersService } from './../../shared/services/users.service';
 import { User } from './../../../../../server/src/database/entities/User.entity';
 
 interface UserId {
-  userId: string; 
+  id: string; 
 }
 @Component({
   selector: 'app-main-login',
@@ -22,7 +22,8 @@ export class MainLoginComponent {
     console.log(this.email, this.password)
     this.usersService.login(this.email, this.password).subscribe(data => {
       if(data) {
-        localStorage.setItem('logged_user_id', String((data as UserId).userId));
+        console.log(data)
+        localStorage.setItem('logged_user_id', String((data as UserId).id));
         this.router.navigate(['/home']);
       } else console.log("Login inválido"); 
     });
