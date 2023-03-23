@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  checkUserAlloedToDarkLaunch(): boolean {
+  checkUserAllowedToDarkLaunch(): boolean {
     return this.darkLaunchService.isDarkLaunched();
   }
 }
