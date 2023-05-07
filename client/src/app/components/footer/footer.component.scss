@@ -1,0 +1,51 @@
+.footer-container {
+    background-color: #000000;
+    height: 15%;
+    width: 100%;
+    color: #F8F8F8;
+    padding: 58px 150px;
+    font-family: 'General Sans';
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 17px;
+
+    h5 {
+        color: #BDBDBD;
+    }
+
+    h3 {
+        margin-bottom: 33px;
+    }
+
+    .footer-links {
+        margin-top: 106px;
+    }
+
+    a, .footer-links span {
+        cursor: pointer;
+        margin-right: 16px;
+        
+        &:hover {
+            color: #BDBDBD;
+        }
+    }
+
+    input,
+    button {
+        margin-top: 24px;
+        background-color: #0000;
+        border: 1px #F8F8F8 solid;
+        border-radius: 2px;
+        color: #F8F8F8;
+        padding: 12px 24px;
+
+        &::placeholder {
+            color: #F8F8F8;
+        }
+    }
+
+    .email-input {
+        width: 291px;
+        margin-right: 19px;
+    }
+}

@@ -25,6 +25,7 @@ import { ChosenForYouComponent } from './pages/chosen-for-you/chosen-for-you.com
 import { HomeComponent } from './pages/home/home.component';
 import { likeReducer } from './state/like/like.reducer';
 import { EffectsModule } from '@ngrx/effects';
+import { FooterComponent } from './components/footer/footer.component';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();
@@ -49,6 +50,7 @@ export function init_app(appLoadService: AppInitService) {
     MyLikesComponent,
     ChosenForYouComponent,
     HomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
