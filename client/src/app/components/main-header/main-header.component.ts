@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { bagState } from 'src/app/state/bag/bag.reducer';
 import { likeState } from './../../state/like/like.reducer';
+import { FeatureToggleDirective } from 'src/app/shared/directives/feature-toggle.directive';
 
 @Component({
   selector: 'app-main-header',
@@ -15,7 +16,9 @@ export class MainHeaderComponent implements OnInit {
   bag$ = this.bagStore.select('bag');
   likes$ = this.likeStore.select('likes');
 
-  constructor(private bagStore: Store<bagState>, private likeStore: Store<likeState>) {}
+  constructor(
+    private bagStore: Store<bagState>, 
+    private likeStore: Store<likeState>) {}
 
   ngOnInit(): void {}
 

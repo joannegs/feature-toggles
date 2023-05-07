@@ -1,23 +1,17 @@
 <div class="main-header-container d-flex justify-content-between">
     <img src="../../../assets/images/menu-hamburger.svg">
     <h3>Canopy .</h3>
-
     <div class="left-icons d-flex justify-content-around">
-        <div ngIf="loggedIn" *appFeatureToggle="'like-feature'" class="d-flex flex-column">            
-            <app-status-tag class="status-tag" [notificationNumber]="0"> </app-status-tag>
-            <img class="icons-with-notifications" src="../../../assets/images/heart.svg">
-
-        </div>
-        <div ngIf="loggedIn" *appFeatureToggle="'bag-feature'" class="d-flex flex-column">            
-            <app-status-tag class="status-tag" [notificationNumber]="(bag$ | async)?.length"> </app-status-tag>
-            <img class="icons-with-notifications" src="../../../assets/images/bag.svg">
-        </div>
-
-        <div *ngIf="loggedIn" class="d-flex flex-column">            
-            <app-status-tag class="status-tag" [notificationNumber]="(likes$ | async)?.length"> </app-status-tag>
-            <img class="icons-with-notifications" src="../../../assets/images/coracao.svg">
-        </div>
-
+        <ng-container *ngIf="loggedIn">
+            <div *appFeatureToggle="'bag-feature'" class="d-flex flex-column">
+                <app-status-tag class="status-tag" [notificationNumber]="(bag$ | async)?.length"> </app-status-tag>
+                <img class="icons-with-notifications" src="../../../assets/images/bag.svg">
+            </div>
+            <div *appFeatureToggle="'like-feature'" class="d-flex flex-column">
+                <app-status-tag class="status-tag" [notificationNumber]="(likes$ | async)?.length"> </app-status-tag>
+                <img class="icons-with-notifications" src="../../../assets/images/heart.svg">
+            </div>
+        </ng-container>
         <img src="../../../assets/images/search.svg">
         <img src="../../../assets/images/person-icon.svg">
     </div>

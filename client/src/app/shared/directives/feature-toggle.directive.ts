@@ -5,7 +5,7 @@ import { FeatureToggleService } from '../services/feature-toggle.service';
   selector: '[appFeatureToggle]'
 })
 export class FeatureToggleDirective {
-  
+
   @Input() set appFeatureToggle(featureName: string) {
     const state = this.featureToggleService.getFeature(featureName);
     state ? this.viewContainer.createEmbeddedView(this.templateRef) : this.viewContainer.clear();

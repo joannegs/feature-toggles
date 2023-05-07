@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { ProductsService } from './../../shared/services/products.service';
 import { BeautyProduct } from './../../shared/interfaces/BeautyProduct.interface';
-import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/state/state.model';
 import { DarkLaunchService } from './../../shared/services/dark-launch.service';
+import { FeatureToggleService } from './../../shared/services/feature-toggle.service';
+import { FeatureToggleDirective } from './../../shared/directives/feature-toggle.directive';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +13,11 @@ import { DarkLaunchService } from './../../shared/services/dark-launch.service';
 export class HomeComponent implements OnInit {
 
   constructor(private productsService: ProductsService, 
-    private store: Store<AppState>, private darkLaunchService: DarkLaunchService) {}
+    private darkLaunchService: DarkLaunchService) {}
 
   products: BeautyProduct[] = [];
 
   ngOnInit() {
-    console.log("home iniciada");
     this.getAllProducts();
   }
 

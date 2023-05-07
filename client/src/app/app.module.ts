@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule, TemplateRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,8 +24,8 @@ import { MyLikesComponent } from './pages/my-likes/my-likes.component';
 import { ChosenForYouComponent } from './pages/chosen-for-you/chosen-for-you.component';
 import { HomeComponent } from './pages/home/home.component';
 import { likeReducer } from './state/like/like.reducer';
-import { EffectsModule } from '@ngrx/effects';
 import { FooterComponent } from './components/footer/footer.component';
+import { FeatureToggleService } from './shared/services/feature-toggle.service';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();
@@ -69,8 +69,8 @@ export function init_app(appLoadService: AppInitService) {
       useFactory: init_app,
       deps: [ AppInitService ],
       multi: true
-    }],
-    
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
