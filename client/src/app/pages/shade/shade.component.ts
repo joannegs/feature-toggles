@@ -11,7 +11,7 @@ export class ShadeComponent implements OnInit {
 
   recommendedProducts: BeautyProduct[] = [];
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
     this.getRecommendedProducts();
@@ -19,9 +19,9 @@ export class ShadeComponent implements OnInit {
 
   getRecommendedProducts() {
     this.productsService.getChosenProducts()
-    .subscribe(products => {
-      this.recommendedProducts = products as Array<BeautyProduct> ;
-    })
+      .subscribe(products => {
+        this.recommendedProducts = products as Array<BeautyProduct>;
+      })
   }
 }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './../../shared/services/products.service';
 import { BeautyProduct } from './../../shared/interfaces/BeautyProduct.interface';
-import { select, Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/state/state.model';
 import { DarkLaunchService } from './../../shared/services/dark-launch.service';
 

@@ -18,8 +18,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
 
 export const getProducts = (req: Request, res: Response, nextFunc: NextFunction) => {
     try {
-        let prods = products;
-        res.status(200).send(prods);
+        res.status(200).send(products);
     } catch (err: any) {
         res.status(401).send({ message: `An error has occuried: ${err.message}` });
     }
@@ -27,14 +26,10 @@ export const getProducts = (req: Request, res: Response, nextFunc: NextFunction)
 
 export const getChosenProducts = (req: Request, res: Response, nextFunc: NextFunction) => {
     try {
-        const prods = products;
-        let chosenProds = [];
-
-        for (let i = 0; i < 3; i++) {
-            let randomIndex = Math.floor(Math.random() * prods.length);
-            chosenProds.push(prods.splice(randomIndex, 1)[0]);
-          }
-
+        let chosenProds = Array.from({ length: 3 }, () => {
+            const randomIndex = Math.floor(Math.random() * products.length);
+            return products[randomIndex];
+        }); 
         res.status(200).send(chosenProds);
     } catch (err: any) {
         res.status(401).send({ message: `An error has occuried: ${err.message}` });
