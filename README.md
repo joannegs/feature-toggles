@@ -7,3 +7,10 @@ Esse projeto demonstração também conta com outra técnica muito utilizada atu
 Ambas as técnicas são de grande importância em projeto que têm entrega contínua e permitem que desenvolvedores possam implementar novas funcionalidades de forma mais segura e com menor impacto no usuário final.
 
 
+## sobre o projeto 
+O backend foi desenvolvido em Node.js e TypeScript, e é responsável por enviar o estado das *toggles* para o front-end, desenvolvido em Angular. Quando o usuário acessa o front-end, o estado das *toggles* é carregado e as funcionalidades são exibidas ou ocultadas de acordo com o estado atual das toggles.
+
+A funcionalidade "Find your shade" só está disponível para usuários cujo e-mail termina com "@gmail.com" graças ao recurso de *dark launch*. Isso significa que, embora a funcionalidade esteja disponível no back-end, ela não será exibida para todos os usuários. A verificação do e-mail do usuário é feita no back-end, e essa informação é enviada ao front quando solicitada, de forma que apenas um grupo dos usuários totais terá acesso. 
+
+
+
