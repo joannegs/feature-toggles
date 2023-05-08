@@ -7,3 +7,7 @@ export const getByEmail = async(email: string) => {
     return await repository.findOneBy({ email: email });
 };
 
+export const getById = async(id: number) => {
+    return await repository.findOneBy({ id });
+};
+

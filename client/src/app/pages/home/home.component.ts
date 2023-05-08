@@ -12,13 +12,15 @@ import { FeatureToggleDirective } from './../../shared/directives/feature-toggle
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private productsService: ProductsService, 
-    private darkLaunchService: DarkLaunchService) {}
+  constructor(private productsService: ProductsService,
+    private darkLaunchService: DarkLaunchService) { }
 
   products: BeautyProduct[] = [];
+  isUserAllowedToFindShade = false;
 
   ngOnInit() {
     this.getAllProducts();
+    this.checkUserAllowedToDarkLaunch();
   }
 
   getAllProducts() {
@@ -27,7 +29,9 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  checkUserAllowedToDarkLaunch(): boolean {
-    return this.darkLaunchService.isDarkLaunched();
+  private checkUserAllowedToDarkLaunch(): void {
+    this.darkLaunchService.isDarkLaunched().subscribe((data) => {
+      this.isUserAllowedToFindShade = data;
+    });
   }
 }

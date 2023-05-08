@@ -4,6 +4,6 @@ import { getFeatures, getAllowedUsersToDarkLauchFeature } from '../controllers/f
 export const router = Router();
 
 router.get('/features', getFeatures);
-router.get('/dark-lauch-users', getAllowedUsersToDarkLauchFeature);
+router.post('/dark-lauch-users', getAllowedUsersToDarkLauchFeature);
 
 
