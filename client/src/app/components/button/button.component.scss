@@ -1,12 +1,22 @@
 button {
     font-family: 'General Sans';
-    padding: 25px 70px;
+    padding: 25px 60px;
     outline: none;
     background-color: #261a13;
     border: none;
     border-radius: 2px;
     color: #FDF2EA;
     font-size: 20px;
+
+    @media(max-width: 992px) { 
+        height: 20px;
+        font-size: 15px;
+    }
+    
+    @media(max-width: 576px) { 
+        height: 15px;
+        font-size: 13px;
+    }
 
     &:hover {
         background-color: #3a281d;

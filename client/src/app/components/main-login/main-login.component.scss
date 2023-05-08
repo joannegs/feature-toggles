@@ -1,5 +1,14 @@
 .main-login-container {
-    height: 82vh;
+    height: 76vh;
+
+    img {
+        max-width: 55%;
+
+        @media(max-width: 950px) {
+            display: none;
+        }
+
+    }
 
     .main-login-info {
         .text-content {
@@ -9,14 +18,23 @@
         }
 
         h3 {
-            width: 760px;
+            margin-top: 8%;
+            width: 600px;
             font-family: 'Cabinet Grotesk';
             color: #3F2B1E;
-            font-size: 70px;
+            font-size: 50px;
             font-weight: 700;
             line-height: 50px;
             letter-spacing: 0.02em;
             margin-bottom: 20px;
+
+            @media(max-width: 768px) {
+                font-size: 5vw;
+            }
+
+            @media(max-width: 576px) {
+                font-size: 4.8vw;
+            }
         }
 
         h5 {
@@ -24,10 +42,18 @@
             color: #0D0D0D;
             width: 575px;
             font-weight: 400;
-            font-size: 30px;
+            font-size: 20px;
             line-height: 35px;
             letter-spacing: 0.005em;
             margin-bottom: 70px;
+
+            @media(max-width: 768px) {
+                font-size: 2.5vw;
+            }
+
+            @media(max-width: 576px) {
+                font-size: 2vw;
+            }
         }
 
         input {
@@ -35,11 +61,22 @@
             background-color: transparent;
             border: 1px solid #828282;
             border-radius: 5px;
-            color:  #4F4F4F;
+            color: #4F4F4F;
             outline: 0;
             padding: 13px 28px;
             margin-bottom: 20px;
             width: 60%;
+
+            @media(max-width: 992px) {
+                height: 20px;
+                font-size: 13px;
+                width: 40%;
+            }
+
+            @media(max-width: 576px) {
+                width: 30%;
+                font-size: 10px;
+            }
         }
     }
 }
