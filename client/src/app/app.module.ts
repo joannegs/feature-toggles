@@ -25,7 +25,6 @@ import { ChosenForYouComponent } from './pages/chosen-for-you/chosen-for-you.com
 import { HomeComponent } from './pages/home/home.component';
 import { likeReducer } from './state/like/like.reducer';
 import { FooterComponent } from './components/footer/footer.component';
-import { FeatureToggleService } from './shared/services/feature-toggle.service';
 
 export function init_app(appLoadService: AppInitService) {
   return () => appLoadService.init();

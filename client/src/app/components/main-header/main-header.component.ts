@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { bagState } from 'src/app/state/bag/bag.reducer';
 import { likeState } from './../../state/like/like.reducer';
-import { FeatureToggleDirective } from 'src/app/shared/directives/feature-toggle.directive';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-header',
@@ -18,8 +18,13 @@ export class MainHeaderComponent implements OnInit {
 
   constructor(
     private bagStore: Store<bagState>, 
-    private likeStore: Store<likeState>) {}
+    private likeStore: Store<likeState>,
+    private router: Router) {}
 
   ngOnInit(): void {}
 
+  logout(): void {
+    localStorage.clear();
+    this.router.navigate(["/"]);
+  }
 }
