@@ -11,7 +11,7 @@ import { Route, Router } from '@angular/router';
 })
 export class MainHeaderComponent implements OnInit {
 
-  loggedIn: boolean = true; 
+  loggedIn: boolean = false; 
 
   bag$ = this.bagStore.select('bag');
   likes$ = this.likeStore.select('likes');
@@ -22,6 +22,10 @@ export class MainHeaderComponent implements OnInit {
     private router: Router) {}
 
   ngOnInit(): void {}
+
+  isLoggedIn() {
+    return !!localStorage.getItem("logged_user_id");
+  }
 
   logout(): void {
     localStorage.clear();
